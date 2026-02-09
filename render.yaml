@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: abhiportfolio-api
+    plan: free
+    region: singapore
+
+    runtime: docker
+    dockerfilePath: Dockerfile
+
+    envVars:
+      - key: PORT
+        value: 8080
+
+      - key: DB_URL
+        value: jdbc:postgresql://<HOST>:5432/<DB_NAME>
+
+      - key: DB_USERNAME
+        value: postgres
+
+      - key: DB_PASSWORD
+        value: root
